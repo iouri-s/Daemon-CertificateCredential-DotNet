@@ -124,7 +124,7 @@ namespace TodoListDaemonWithCert
                 retry = false;
                 try
                 {   // ADAL includes an in memory cache, so this call will only send a message to the server if the cached token is expired.
-                    result = await authContext.AcquiresTokenAsync(todoListResourceId, certCred);
+                    result = await authContext.AcquireTokenAsync(todoListResourceId, certCred);
                 }
                 catch (AdalException ex)
                 {
